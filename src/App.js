@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import Home from './home';
 import './App.css';
 
 function App() {
@@ -7,9 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-        <p>
-          Future home of StockUp!
-        </p>
+        <Home />
         
       </header>
     </div>
