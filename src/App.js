@@ -1,6 +1,7 @@
 import React from 'react';
 import { Router } from "react-router-dom";
 import './App.css';
+import "fontsource-roboto";
 
 import history from './services/history';
 import Routes from './routes';
