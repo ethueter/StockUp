@@ -1,12 +1,13 @@
 import React from 'react';
+import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 
 
 const Portfolio = () => {
-
+    const tagline = "Your Portfolio"
     return (
         <div>
-            <h1>This will be the portfolio page.</h1>
+            <Header tagline={tagline} />
             <Navbar />
         </div>
     )
