@@ -1,3 +1,9 @@
+body {
+  margin: 0px 25px 0px 25px;
+  background-color: #29BF12;
+  /* 16DB65  */
+}
+
 .navbar {
   flex-grow: 1;
 }
