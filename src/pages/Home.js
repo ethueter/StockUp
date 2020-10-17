@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 
@@ -19,15 +24,29 @@ const Home = () => {
           alignItems="stretch"
           spacing={3}
         >
-          <Grid item lg="9">
+          <Grid item md="9">
             <Paper>
-              <h2>Headline One</h2>
+              <h2>Top Market News</h2>
+              <h4>Headline 1</h4>
+              <h4>Headline 1</h4>
             </Paper>
           </Grid>
-          <Grid item lg="3">
-            <Paper>
-              <h2>About This Site</h2>
-            </Paper>
+          <Grid item sm="3">
+            <Card variant="outlined" raised>
+              <CardContent>
+                <Typography variant="h4" gutterBottom>
+                  About This Site
+                </Typography>
+                <Typography variant="body2" component="p">
+                  Play to win! 
+                  <br />
+                  Open your account with a virtual $10K. Research, and trade to build the best portfolio.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button>Open Account</Button>
+              </CardActions>
+            </Card>
           </Grid>
         </Grid>
       </Grid>
