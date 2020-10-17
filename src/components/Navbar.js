@@ -13,7 +13,7 @@ const Navbar = () => {
     };
 
     return (
-      <AppBar position="static" className="navbar">
+      <AppBar position="static" color="default">
         <Tabs
           value={value}
           onChange={handleChange}
@@ -21,10 +21,10 @@ const Navbar = () => {
           textColor="primary"
           centered
         >
-          <Tab label="Home"  href="/" value="home"></Tab>
-          <Tab label="Portfolio" href="/portfolio" ></Tab>
-          <Tab label="Trade" href="/trade" ></Tab>
-          <Tab label="Research" href="/research" ></Tab>
+          <Tab label="Home" href="/" value="home"></Tab>
+          <Tab label="Portfolio" href="/portfolio"></Tab>
+          <Tab label="Trade" href="/trade"></Tab>
+          <Tab label="Research" href="/research"></Tab>
         </Tabs>
       </AppBar>
     );
