@@ -13,8 +13,7 @@ const Header = ({ tagline }) => {
           <h3>{tagline}</h3>
         </Grid>
         <Grid  
-            className="loginButton" 
-            item 
+            container
             xs={2}
             alignContent="centered">
             <Button>Account Login</Button>
