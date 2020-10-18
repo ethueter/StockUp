@@ -8,14 +8,20 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import Snapshot from '../components/Snapshot';
 
 
 const Home = () => {
+    const [login, setLogin] = useState(false);
     const tagline = "Build Your Fantasy Portfolio Today!";
+
+    const handleLogin = () => {
+      setLogin(!login);
+    }
 
     return (
       <Grid container spacing={2}>
-        <Header tagline={tagline} />
+        <Header tagline={tagline} login={handleLogin}/>
         <Navbar />
         <Grid
           container
@@ -34,6 +40,9 @@ const Home = () => {
             </Typography>
           </Grid>
           <Grid item sm="3">
+            {login ? 
+              <Snapshot /> :
+            
             <Card variant="outlined" raised="true">
               <CardContent>
                 <Typography variant="h4" gutterBottom>
@@ -50,6 +59,7 @@ const Home = () => {
                 <Button>Open Account</Button>
               </CardActions>
             </Card>
+            }
           </Grid>
         </Grid>
       </Grid>

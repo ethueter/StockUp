@@ -11,3 +11,5 @@ const Snapshot = () => {
       </Card>
     );
 }
+
+export default Snapshot;
