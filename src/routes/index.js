@@ -7,6 +7,7 @@ import CurrentMarket from '../pages/CurrentMarket';
 import Portfolio from '../pages/Portfolio';
 import Research from '../pages/Research';
 import Trade from '../pages/Trade';
+import SignUpPage from '../components/SignUp';
 
 export default function Routes() {
     return (
@@ -16,6 +17,7 @@ export default function Routes() {
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/research" component={Research} />
         <Route path="/trade" component={Trade} />
+        <Route path="/signup" component={SignUpPage} />
       </Switch>
     );
 }

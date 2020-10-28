@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { withFirebase } from '../Firebase/context';
+
 
 const SignUpPage = () => (
   <div>
     <h1>Sign Up</h1>
     <SignUpForm />
+    
   </div>
 );
 
@@ -17,7 +20,7 @@ const INITIAL_STATE = {
     error: null,
 };
     
-class SignUpForm extends Component {
+class SignUpFormBase extends Component {
     constructor(props){
         super(props)
 
@@ -103,6 +106,8 @@ const SignUpLink = () => (
         Don't have an account? <Link to="/home">Sign Up</Link>
     </p>
 );
+
+const SignUpForm = withFirebase(SignUpFormBase);
 
 export default SignUpPage;
 
