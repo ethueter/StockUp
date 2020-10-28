@@ -12,7 +12,7 @@ import SignUpPage from '../components/SignUp';
 export default function Routes() {
     return (
       <Switch>
-        <Route path="/home" exact component={Home} />
+        <Route path="/" exact component={Home} />
         <Route path="/currentmarket" component={CurrentMarket} />
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/research" component={Research} />

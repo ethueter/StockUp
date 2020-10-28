@@ -30,7 +30,7 @@ const Home = () => {
           alignItems="stretch"
           spacing={3}
         >
-          <Grid item md="9">
+          <Grid item md="auto">
             <Typography>
               <Paper>
                 <h2>Top Market News</h2>
@@ -39,11 +39,11 @@ const Home = () => {
               </Paper>
             </Typography>
           </Grid>
-          <Grid item sm="3">
+          <Grid item md="auto">
             {login ? 
               <Snapshot /> :
             
-            <Card variant="outlined" raised="true">
+            <Card variant="outlined" raised>
               <CardContent>
                 <Typography variant="h4" gutterBottom>
                   About This Site

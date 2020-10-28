@@ -16,14 +16,14 @@ const Portfolio = () => {
                 justify="space-around"
                 alignItems="stretch"
                 spacing={3}>
-          <Grid item md="9">
+          <Grid item md="auto">
             <Paper>
               <Typography variant="h4" gutterBottom>
                 Current Holdings
               </Typography>
             </Paper>
           </Grid>
-          <Grid item md="3">
+          <Grid item md="auto">
             <Card variant="outlined">
                 <CardContent>
                     <Typography variant="h4" gutterBottom>

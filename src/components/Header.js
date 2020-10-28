@@ -8,14 +8,13 @@ const Header = ({ tagline, login }) => {
 
     return (
       <Grid container>
-        <Grid item xs={10}>
+        <Grid item={true} xs={10}>
           <h1>Stock UP!</h1>
           <h3>{tagline}</h3>
         </Grid>
         <Grid  
-            container
-            xs={2}
-            alignContent="centered">
+            item
+            xs={2}>
             <Button onClick={login}>Account Login</Button>
         </Grid>
       </Grid>
