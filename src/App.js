@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Router } from "react-router-dom";
 import './App.css';
 import "fontsource-roboto";
 
 import history from './services/history';
 import Routes from './routes';
+import { withFirebase } from './components/Firebase';
 
-function App() {
+const App = ({ firebase }) => {
+  const [authUser, setAuthUser] = useState(null);
+
+  useEffect(() => {
+    firebase.auth.onAuthStateChanged(authUser => {
+      authUser 
+        ? setAuthUser(authUser) 
+        : setAuthUser(null);
+    });
+  }, [firebase.auth])
+
+
   return (
     <Router history={history}>
-      <Routes />
+      <Routes authUser={authUser} />
     </Router>
   );
 }
 
-export default App;
+export default withFirebase(App);
