@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Header from '../components/Header';
-import Navbar from '../components/Navbar';
+
 import { Card, Paper, Typography, CardContent } from '@material-ui/core';
 
 
@@ -10,7 +10,7 @@ const Portfolio = () => {
     return (
       <Grid container spacing={2}>
         <Header tagline={tagline} />
-        <Navbar />
+        
         <Grid container
                 direction="row"
                 justify="space-around"

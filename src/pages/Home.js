@@ -21,7 +21,7 @@ const Home = () => {
     return (
       <Grid container spacing={2}>
         <Header tagline={tagline} login={login} loginTemp={handleLogin} />
-        <Navbar />
+        
         <Grid
           container
           direction="row"
