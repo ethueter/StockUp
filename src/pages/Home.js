@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -21,7 +20,7 @@ const Home = () => {
 
     return (
       <Grid container spacing={2}>
-        <Header tagline={tagline} login={login} loginTemp={handleLogin}/>
+        <Header tagline={tagline} login={login} loginTemp={handleLogin} />
         <Navbar />
         <Grid
           container
@@ -31,35 +30,39 @@ const Home = () => {
           spacing={3}
         >
           <Grid item md="auto">
-            <Typography>
-              <Paper>
-                <h2>Top Market News</h2>
-                <h4>Headline 1</h4>
-                <h4>Headline 1</h4>
-              </Paper>
-            </Typography>
+            <Card>
+              
+                <CardContent>
+                  <Typography variant="h4" gutterBottom>
+                    Top Market News
+                  </Typography>
+                  <h4>Headline 1</h4>
+                  <h4>Headline 2</h4>
+                </CardContent>
+              
+            </Card>
           </Grid>
           <Grid item md="auto">
-            {login ? 
-              <Snapshot /> :
-            
-            <Card variant="outlined" raised>
-              <CardContent>
-                <Typography variant="h4" gutterBottom>
-                  About This Site
-                </Typography>
-                <Typography variant="body2" component="p">
-                  Play to win!
-                  <br />
-                  Open your account with a virtual $10K on us. Research, and trade to
-                  build the best portfolio.
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button>Open Account</Button>
-              </CardActions>
-            </Card>
-            }
+            {login ? (
+              <Snapshot />
+            ) : (
+              <Card variant="outlined" raised>
+                <CardContent>
+                  <Typography variant="h4" gutterBottom>
+                    About This Site
+                  </Typography>
+                  <Typography variant="body2" component="p">
+                    Play to win!
+                    <br />
+                    Open your account with a virtual $10K on us. Research, and
+                    trade to build the best portfolio.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button>Open Account</Button>
+                </CardActions>
+              </Card>
+            )}
           </Grid>
         </Grid>
       </Grid>
