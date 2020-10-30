@@ -6,7 +6,8 @@ import "fontsource-roboto";
 import history from './services/history';
 import Routes from './routes';
 import { withFirebase } from './components/Firebase';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
+import Navigation from './components/Navigation';
 import Header from './components/Header';
 
 const App = ({ firebase }) => {
@@ -24,7 +25,8 @@ const App = ({ firebase }) => {
   return (
     <Router history={history}>
       <Header />
-      <Navbar />
+      <Navigation />
+      <hr />
       <Routes authUser={authUser} />
     </Router>
   );
