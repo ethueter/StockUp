@@ -1,15 +1,14 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Header from '../components/Header';
+
 
 import { Card, Paper, Typography, CardContent } from '@material-ui/core';
 
 
 const Portfolio = () => {
-    const tagline = "Your Portfolio"
+    
     return (
       <Grid container spacing={2}>
-        <Header tagline={tagline} />
         
         <Grid container
                 direction="row"

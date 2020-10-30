@@ -7,6 +7,7 @@ import history from './services/history';
 import Routes from './routes';
 import { withFirebase } from './components/Firebase';
 import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 const App = ({ firebase }) => {
   const [authUser, setAuthUser] = useState(null);
@@ -22,6 +23,7 @@ const App = ({ firebase }) => {
 
   return (
     <Router history={history}>
+      <Header />
       <Navbar />
       <Routes authUser={authUser} />
     </Router>
