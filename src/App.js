@@ -6,7 +6,7 @@ import "fontsource-roboto";
 import history from './services/history';
 // import Routes from './routes';
 import { withFirebase } from './components/Firebase';
-// import Navbar from './components/Navbar';
+import { AuthUserContext } from './components/Session';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -29,17 +29,19 @@ const App = ({ firebase }) => {
 
 
   return (
-    <Router history={history}>
-      <Header />
-      <Navigation authUser={authUser}/>
-      <hr />
-      <Route path="/" exact component={Home} />
-      <Route path="/portfolio" component={Portfolio} />
-      <Route path="/research" component={Research} />
-      <Route path="/trade" component={Trade} />
-      <Route path="/signup" component={SignUpPage} />
-      <Route path="/signin" component={SignInPage} />
-    </Router>
+    <AuthUserContext.Provider value={authUser}>
+      <Router history={history}>
+        <Header />
+        <Navigation />
+        <hr />
+        <Route path="/" exact component={Home} />
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/research" component={Research} />
+        <Route path="/trade" component={Trade} />
+        <Route path="/signup" component={SignUpPage} />
+        <Route path="/signin" component={SignInPage} />
+      </Router>
+    </AuthUserContext.Provider>
   );
 }
 
