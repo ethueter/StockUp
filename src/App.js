@@ -30,7 +30,7 @@ const App = ({ firebase }) => {
   return (
     <Router history={history}>
       <Header />
-      <Navigation />
+      <Navigation authUser={authUser}/>
       <hr />
       <Route path="/" exact component={Home} />
       <Route path="/portfolio" component={Portfolio} />
