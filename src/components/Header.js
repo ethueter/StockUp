@@ -1,11 +1,9 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
-import SignOutButton from './SignOut';
 
 
-const Header = ({ tagline, login, loginTemp }) => {
+const Header = ({ tagline }) => {
     
 
     return (
@@ -17,8 +15,6 @@ const Header = ({ tagline, login, loginTemp }) => {
         <Grid  
             item
             xs={2}>
-            <Button onClick={loginTemp}>Account Login</Button>
-          {login ? <SignOutButton /> : null}
         </Grid>
       </Grid>
     );
