@@ -14,6 +14,7 @@ import Portfolio from './pages/Portfolio';
 import Trade from './pages/Trade';
 import Research from './pages/Research';
 import SignUpPage from './components/SignUp';
+import SignInPage from './components/SignIn';
 
 const App = ({ firebase }) => {
   const [authUser, setAuthUser] = useState(null);
@@ -37,6 +38,7 @@ const App = ({ firebase }) => {
       <Route path="/research" component={Research} />
       <Route path="/trade" component={Trade} />
       <Route path="/signup" component={SignUpPage} />
+      <Route path="/signin" component={SignInPage} />
     </Router>
   );
 }
