@@ -17,7 +17,7 @@ const withAuthentication = Component => {
         
             return (
               <AuthUserContact.Provider value={authUser}>
-                <Component {...this.props} />
+                <Component />
               </AuthUserContact.Provider>
             ); 
         
