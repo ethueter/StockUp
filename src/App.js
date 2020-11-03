@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import "fontsource-roboto";
 
 import history from './services/history';
 // import Routes from './routes';
-import { withFirebase } from './components/Firebase';
-import { AuthUserContext } from './components/Session';
+import { withAuthentication } from './components/Session';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -16,20 +15,9 @@ import Research from './pages/Research';
 import SignUpPage from './components/SignUp';
 import SignInPage from './components/SignIn';
 
-const App = ({ firebase }) => {
-  const [authUser, setAuthUser] = useState(null);
-
-  useEffect(() => {
-    firebase.auth.onAuthStateChanged(authUser => {
-      authUser 
-        ? setAuthUser(authUser) 
-        : setAuthUser(null);
-    });
-  }, [firebase.auth])
-
+const App = () => {
 
   return (
-    <AuthUserContext.Provider value={authUser}>
       <Router history={history}>
         <Header />
         <Navigation />
@@ -41,8 +29,8 @@ const App = ({ firebase }) => {
         <Route path="/signup" component={SignUpPage} />
         <Route path="/signin" component={SignInPage} />
       </Router>
-    </AuthUserContext.Provider>
+    
   );
 }
 
-export default withFirebase(App);
+export default withAuthentication(App);
