@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-
+import AuthUserContext from './context';
 import { withFirebase } from '../Firebase';
 
 
@@ -17,7 +17,9 @@ const withAuthorization = condition => Component => {
         }, [])
 
         return (
-           <Component />
+          <AuthUserContext.Consumer>
+                {authUser => condition(authUser) ? <Component /> : null}
+          </AuthUserContext.Consumer>
         );
 
     }
