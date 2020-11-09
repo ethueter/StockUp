@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
-
+import { withAuthorization } from '../components/Session';
 
 const Research = () => {
     
@@ -13,4 +13,7 @@ const Research = () => {
     )
 }
 
-export default Research;
+const condition = authUser => !!authUser;
+
+
+export default withAuthorization(condition)(Research);
