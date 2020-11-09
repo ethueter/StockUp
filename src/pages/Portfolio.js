@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 
 import { Card, Paper, Typography, CardContent } from '@material-ui/core';
 
+import { withAuthorization } from '../components/Session';
+
 
 const Portfolio = () => {
     
@@ -38,4 +40,6 @@ const Portfolio = () => {
     );
 }
 
-export default Portfolio;
+const condition = authUser => !!authUser;
+
+export default withAuthorization(condition)(Portfolio);

@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
-
+import { withAuthorization } from "../components/Session";
 
 
 const Trade = () => {
@@ -14,4 +14,6 @@ const Trade = () => {
     )
 }
 
-export default Trade;
+const condition = authUser =>!!authUser;
+
+export default withAuthorization(condition)(Trade);
