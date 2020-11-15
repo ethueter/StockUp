@@ -66,3 +66,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+This project uses Firebase for authentication and for a realtime database.
+
+Credit for authorization and structure is to the blog: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial#protected-routes-in-react-with-authorization
+
+Some modifications were made from class to functional components in some files.
